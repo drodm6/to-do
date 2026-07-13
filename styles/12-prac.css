@@ -1,0 +1,166 @@
+/* ---------- base page ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  background-color: #f4f1ea;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- app card ---------- */
+.app {
+  width: 100%;
+  max-width: 520px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- title ---------- */
+.title {
+  margin: 0 0 24px 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #2b2b2b;
+  text-transform: uppercase;
+  border-bottom: 3px solid #2b8a3e;
+  padding-bottom: 12px;
+}
+
+/* ---------- input row ---------- */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.todo-input {
+  flex: 2 1 180px;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.todo-input:focus {
+  border-color: #2b8a3e;
+}
+
+.date-input {
+  flex: 1 1 140px;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.date-input:focus {
+  border-color: #2b8a3e;
+}
+
+.add-btn {
+  flex: 0 0 auto;
+  background-color: #2b8a3e;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.add-btn:hover {
+  background-color: #237032;
+}
+
+.add-btn:active {
+  transform: translateY(2px);
+}
+
+/* ---------- todo list items ---------- */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f6;
+  border: 1px solid #eee;
+  border-left: 4px solid #2b8a3e;
+  border-radius: 8px;
+  padding: 12px 14px;
+  animation: slideIn 0.25s ease;
+}
+
+.todo-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #2b2b2b;
+  line-height: 1.4;
+}
+
+.todo-item .todo-date {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.delete-btn {
+  background-color: #e03131;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 12px;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c92a2a;
+}
+
+/* ---------- empty state ---------- */
+.empty-message {
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+/* ---------- animation ---------- */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
