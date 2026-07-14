@@ -22,6 +22,21 @@
     </div>
   </div>
 
+
+
+  <!-- edit popup, hidden until an edit button is clicked -->
+<div id="editModal" class="modal-overlay hidden">
+  <div class="modal-box">
+    <h2 class="modal-title">Edit todo</h2>
+    <input type="text" id="editTextInput" class="todo-input" />
+    <input type="date" id="editDateInput" class="date-input" />
+    <div class="modal-actions">
+      <button id="applyEditBtn" class="add-btn">Apply</button>
+      <button id="cancelEditBtn" class="delete-btn">Cancel</button>
+    </div>
+  </div>
+</div>
+
   <script src="scripts/12-prac.js"></script>
 </body>
 </html>
