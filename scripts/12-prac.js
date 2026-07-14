@@ -1,7 +1,4 @@
 // ---------- state ----------
-// each todo is an object: { id, text, date }
-// keeping them in an array lets us loop over them and re-draw the list
-// any time something changes (added or deleted).
 let todos = [];
 
 // grab the elements once, so we don't query the DOM over and over
