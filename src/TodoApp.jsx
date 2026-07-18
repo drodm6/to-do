@@ -76,8 +76,12 @@ export default function TodoApp() {
   }
 
   function deleteTodo(id) {
-    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
-  }
+  const confirmed = window.confirm("Are you sure you want to delete this task?");
+
+  if (!confirmed) return; // user clicked "Cancel" — do nothing, function stops here
+
+  setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+}
 
   // =======================================================
   // SEARCH / FILTER
@@ -93,7 +97,7 @@ export default function TodoApp() {
     return todos.filter((todo) => {
       const textMatch = todo.text.toLowerCase().includes(query);
       const tagMatch = todo.tag.toLowerCase().includes(query);
-      return textMatch || tagMatch;
+      return textMatch || tagMatch; 
     });
   }
 
